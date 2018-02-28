@@ -24,8 +24,8 @@ def print_the_header():
 
 def get_html_from_web(zipcode):
 	url = 'http://www.wundergroup.com/weather-forcast/{}'.format(zipcode)
-	reponse = requests.get(url)
-	return response.txt
+	response = requests.get(url)
+	return response
 
 
 def get_weather_from_html(html):
