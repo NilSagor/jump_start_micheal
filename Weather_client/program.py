@@ -29,7 +29,7 @@ def get_html_from_web(zipcode):
 
 
 def get_weather_from_html(html):
-	soup = bs4.BeatifulSoup(html, 'html.parse')
+	soup = bs4.BeautifulSoup(html, 'html.parse')
 	loc = soup.find(class_='region-content-header').find('h1').get_text()
 	condition = soup.find(class_='condition-icon').find(class_='wu-value').get_text()
 	temp = soup.find(class_='wu-unit-temperature').find(calss='wu-value').get_text()
@@ -50,6 +50,3 @@ def cleanup_text(text:str):
 
 if __name__ == '__main__':
 	main()
-
-
-
